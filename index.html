@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+</head>
+<body>
+    <script>
+        alert('Добрый день, Вас приветствует программа калькулятор!');
+        alert('Пожалуйста, выберете арифметическое дейтсвие из 4 возможных');
+        do {
+            var operation = prompt('+, -, *, /');
+            switch (operation) {
+                case "+":
+                    var a = +prompt("Введите первое слагаемое:");
+                    var b = +prompt("Введите второе слагаемое:");
+                    alert(addition(a, b));
+                    break;
+                case "-":
+                    var a = +prompt("Введите вычитаемое:");
+                    var b = +prompt("Введите вычитатель:");
+                    alert(subtraction(a, b));
+                    break;
+                case "*":
+                    var a = +prompt("Введите первый множитель:");
+                    var b = +prompt("Введите второй множитель:");
+                    alert(multiplication(a, b));
+                    break;
+                case "/":
+                    var a = +prompt("Введите делимое:");
+                    var b = +prompt("Введите делитель:");
+                    alert(division(a, b));
+                    break;
+                default:
+                    alert("Вы не ввели никакую операцию:");
+                    break;
+            }
+        } while (confirm("Вы хотите продолжить?"));
+        function addition(a, b) {
+            var result = a + b;
+            return result;
+        }
+        function subtraction(a, b) {
+            var result = a - b;
+            return result;
+        }
+        function multiplication(a, b) {
+            var result = a * b;
+            return result;
+        }
+        function division(a, b) {
+            var result = a / b;
+            return result;
+        }
+    </script>
+</body>
+</html>
